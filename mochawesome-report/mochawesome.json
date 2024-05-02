@@ -1,0 +1,195 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-02T02:13:46.743Z",
+    "end": "2024-05-02T02:13:53.297Z",
+    "duration": 6554,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3ecca5d2-5eb3-4553-bed5-b6bca605c75a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96a35442-6317-4ad4-a9f6-cb1b51998499",
+          "title": "Login Form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display the login form",
+              "fullTitle": "Login Form should display the login form",
+              "timedOut": null,
+              "duration": 978,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('h2').contains('Login');\ncy.get('input[id=\"username\"]');\ncy.get('input[id=\"password\"]');\ncy.get('button[type=\"submit\"]');",
+              "err": {},
+              "uuid": "d4e2eabd-97cd-4293-95e5-cc9fef518bd6",
+              "parentUUID": "96a35442-6317-4ad4-a9f6-cb1b51998499",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should log in the user with correct credentials",
+              "fullTitle": "Login Form should log in the user with correct credentials",
+              "timedOut": null,
+              "duration": 659,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=\"username\"]').type('admin');\ncy.get('input[name=\"password\"]').type('123456');\ncy.get('button[type=\"submit\"]').click();\ncy.get('[id=\"loginMessage\"]').contains('Login successful!');",
+              "err": {},
+              "uuid": "d1ed4a6e-0f7c-4fee-a5c4-1c930227fb58",
+              "parentUUID": "96a35442-6317-4ad4-a9f6-cb1b51998499",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display error message when login with invalid credentials",
+              "fullTitle": "Login Form should display error message when login with invalid credentials",
+              "timedOut": null,
+              "duration": 725,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=\"username\"]').type('irmatampubolon');\ncy.get('input[name=\"password\"]').type('12345678');\ncy.get('button[type=\"submit\"]').click();\ncy.get('[id=\"loginMessage\"]').should('contain', 'Invalid username or password.');",
+              "err": {},
+              "uuid": "5b3ae0bc-9894-444f-b593-c12f8ebd863f",
+              "parentUUID": "96a35442-6317-4ad4-a9f6-cb1b51998499",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display error messages for empty form fields",
+              "fullTitle": "Login Form should display error messages for empty form fields",
+              "timedOut": null,
+              "duration": 460,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button[type=\"submit\"]').click();\ncy.get('[id=\"loginMessage\"]').contains('Please enter both username and password.');",
+              "err": {},
+              "uuid": "b348a1bb-449d-49f7-bea5-ae0cccde1af7",
+              "parentUUID": "96a35442-6317-4ad4-a9f6-cb1b51998499",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display error message when username fields is empty",
+              "fullTitle": "Login Form should display error message when username fields is empty",
+              "timedOut": null,
+              "duration": 404,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[id=\"password\"]').type('password');\ncy.get('button[type=\"submit\"]').click();\ncy.get('[id=\"loginMessage\"]').contains('Please enter both username and password.');",
+              "err": {},
+              "uuid": "a1f33229-6ce9-4006-ae71-19e86c5e651c",
+              "parentUUID": "96a35442-6317-4ad4-a9f6-cb1b51998499",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display error message when password field is empty",
+              "fullTitle": "Login Form should display error message when password field is empty",
+              "timedOut": null,
+              "duration": 390,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[id=\"username\"]').type('username');\ncy.get('button[type=\"submit\"]').click();\ncy.get('[id=\"loginMessage\"]').contains('Please enter both username and password.');",
+              "err": {},
+              "uuid": "e3224002-81c1-4526-9668-25a84c726891",
+              "parentUUID": "96a35442-6317-4ad4-a9f6-cb1b51998499",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d4e2eabd-97cd-4293-95e5-cc9fef518bd6",
+            "d1ed4a6e-0f7c-4fee-a5c4-1c930227fb58",
+            "5b3ae0bc-9894-444f-b593-c12f8ebd863f",
+            "b348a1bb-449d-49f7-bea5-ae0cccde1af7",
+            "a1f33229-6ce9-4006-ae71-19e86c5e651c",
+            "e3224002-81c1-4526-9668-25a84c726891"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3616,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
